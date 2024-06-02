@@ -1,20 +1,11 @@
+.header__nav {
+}
+.nav {
+	font-size: 18px;
+}
 .nav__list {
-  display: flex;
-  column-gap: 15px;
-  justify-content: end;
+	display: flex;
+	column-gap: 30px;
 }
-
-.nav__link {
-  font-weight: 700;
-  color: var(--basic-white);
-}
-
-.mobile-nav .nav__link:hover {
-  color: var(--accent);
-}
-
-@media (max-width: 768px) {
-  .nav__list {
-    justify-content: start;
-  }
+.active {
 }
