@@ -1,80 +1,146 @@
-/* Nav Icon */
-.mobile-nav-btn {
-	--time: 0.1s;
+// /* Nav Icon */
 
-	--width: 40px;
-	--height: 30px;
-
-	--line-height: 4px;
-	--spacing: 6px;
-
-	--color: #000;
-	--radius: 4px;
-
-	/* Dynamic height and width */
-	height: calc(var(--line-height) * 3 + var(--spacing) * 2);
-	width: var(--width);
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
 }
 
-.nav-icon {
-	position: relative;
-	width: var(--width);
-	height: var(--line-height);
-	background-color: var(--color);
-	border-radius: var(--radius);
+.cf:after {
+  clear: both;
 }
 
-.nav-icon::before,
-.nav-icon::after {
-	content: '';
-	display: block;
-
-	position: absolute;
-	left: 0;
-
-	width: var(--width);
-	height: var(--line-height);
-
-	border-radius: var(--radius);
-	background-color: var(--color);
-	transition: transform var(--time) ease-in,
-		top var(--time) linear var(--time);
+.cf {
+  *zoom: 1;
 }
 
-.nav-icon::before {
-	top: calc(-1 * (var(--line-height) + var(--spacing)));
+.row .three {
+  padding: 80px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
 }
 
-.nav-icon::after {
-	top: calc(var(--line-height) + var(--spacing));
+.hamburger .line {
+  width: 30px;
+  height: 1px;
+  background-color: #ffd613;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.nav-icon.nav-icon--active {
-	background-color: transparent;
+.hamburger .line:first-child {
+  margin-left: 6px;
 }
 
-.nav-icon.nav-icon--active::before,
-.nav-icon.nav-icon--active::after {
-	top: 0;
-	transition: top var(--time) linear,
-		transform var(--time) ease-in var(--time);
+.hamburger-9.is-active .line {
+  margin-right: 10px;
 }
 
-.nav-icon.nav-icon--active::before {
-	transform: rotate(45deg);
+.hamburger-9.is-active .line:first-child {
+  margin-left: 0;
 }
 
-.nav-icon.nav-icon--active::after {
-	transform: rotate(-45deg);
+@media (min-width: 560px) {
+  .hamburger .line {
+    width: 50px;
+    margin-top: 11px;
+  }
+  .hamburger-9.is-active .line {
+    margin-top: 7px;
+    margin-right: 15px;
+  }
 }
 
-/* Layout */
+.hamburger-9.is-active .line {
+  width: 17.5px;
+}
 
-.mobile-nav-btn {
-	z-index: 999;
-	// display: none;
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.hamburger-9 {
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-9.is-active {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.hamburger-9:before {
+  content: "";
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  border: 5px solid transparent;
+  top: calc(43% - 17.5px);
+  right: calc(69% - 17.5px);
+  //   top: 11px;
+  //   right: 13px;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 560px) {
+  .hamburger-9:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    top: calc(43% - 25px);
+    right: calc(69% - 25px);
+    //   top: 11px;
+    //   right: 13px;
+  }
+  .hamburger-9.is-active .line {
+    width: 25px;
+  }
+}
+
+.hamburger-9.is-active:before {
+  border: 2px solid #ffd613;
+}
+
+.hamburger-9.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-9.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  -o-transform: translateY(13px);
+  transform: translateY(13px);
+}
+
+.hamburger-9.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(90deg);
+  -ms-transform: translateY(-13px) rotate(90deg);
+  -o-transform: translateY(-13px) rotate(90deg);
+  transform: translateY(-13px) rotate(90deg);
+}
+
+.hamburger-9:not(:has(.is-active)) .line:nth-child(3) {
+  display: none;
+}
+
+.hamburger-9.is-active .line:nth-child(3) {
+  display: inline-block;
 }
