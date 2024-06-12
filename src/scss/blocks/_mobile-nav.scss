@@ -11,8 +11,13 @@
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background: linear-gradient(209deg, lightcoral -17.38%, coral 78.4%), pink;
+  // background: linear-gradient(209deg, lightcoral -17.38%, coral 78.4%), pink;
+  background-color: #131212;
   transition: all 0.2s ease-in;
+}
+
+.mobile-nav-btn {
+  position: relative;
 }
 
 .mobile-nav--open {
@@ -33,4 +38,9 @@
   & .active {
     opacity: 0.5;
   }
+}
+
+.mobile-nav-btn-box {
+  display: flex;
+  align-items: center;
 }
