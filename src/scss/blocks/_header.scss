@@ -3,6 +3,18 @@
   background-color: #131212;
   padding: 18px 0;
 
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1300px;
+    }
+  }
+
+  @media (max-width: 559px) {
+    .container {
+      max-width: 364px;
+    }
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;

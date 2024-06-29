@@ -1,0 +1,350 @@
+.detailing-main {
+  padding-top: 74px;
+  padding-bottom: 95.5px;
+
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1300px;
+    }
+  }
+
+  // @media (min-width: 560px) and (max-width: 1023px) {
+  //   .container {
+  //     // margin: 0 15px;
+  //     // --container-padding: 30px;
+  //   }
+  // }
+  @media (max-width: 559px) {
+    .container {
+      padding-left: 0;
+    }
+  }
+}
+.detailing-main__flex-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailing-main__content {
+  //   background: url("../../img/dots.png") 1px 1px no-repeat;
+  position: relative;
+}
+.detailing-main__title {
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 0.94118;
+  color: var(--yellow);
+  max-width: 625px;
+  margin-bottom: 30px;
+}
+.detailing-main__span {
+  color: var(--main-white);
+}
+.detailing-main__subtitle {
+  font-size: 35px;
+  line-height: 1.14286;
+  color: #fff;
+  margin-bottom: 45px;
+
+  @media (min-width: 1024px) {
+    max-width: 478px;
+  }
+}
+.detailing-main__buttons-box {
+  display: flex;
+  align-items: center;
+  column-gap: 23px;
+}
+
+.detailing-main__button:first-child {
+  &:hover {
+    color: #fff;
+  }
+}
+
+.detailing-main__button-wrap:last-child {
+  background: linear-gradient(180deg, var(--main-white), var(--yellow));
+  padding: 2px;
+  border-radius: 50px;
+
+  .detailing-main__button {
+    display: inline-block;
+    background: #131212;
+    color: white;
+
+    &:hover {
+      color: var(--yellow);
+      background: #222;
+    }
+  }
+}
+
+.dark-button {
+  padding: 33.5px 39.5px;
+}
+.detailing-main__image {
+}
+
+.detailing-main__dots-box {
+  position: absolute;
+  top: -19px;
+  left: -27px;
+}
+.detailing-main__dots-image {
+}
+
+.detailing-main__images {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas:
+    "image01 image02"
+    "image01 image03";
+  gap: 23px;
+}
+
+.detailing-main__grid-item {
+  position: relative;
+}
+
+.detailing-main__grid-item:first-child {
+  grid-area: image01;
+  justify-self: end;
+
+  .detailing-main__crosses-box {
+    position: absolute;
+    top: -50px;
+    left: -57px;
+  }
+}
+
+.detailing-main__grid-image-box img {
+  border-radius: 30px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.detailing-main__crosses-image {
+}
+
+.detailing-main__grid-item:nth-child(2) {
+  grid-area: image02;
+
+  img {
+    max-width: 258px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .detailing-main__crosses-box {
+    position: absolute;
+    top: -47px;
+    right: -57px;
+  }
+}
+
+.detailing-main__grid-item:last-child {
+  grid-area: image03;
+  img {
+    max-width: 279px;
+    border-radius: 0 30px 30px 30px;
+  }
+
+  .detailing-main__crosses-box {
+    position: absolute;
+    bottom: 30px;
+    left: -78px;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 1439px) {
+  .detailing-main__title {
+    font-size: 60px;
+    margin-bottom: 24px;
+    line-height: 1.33333;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 1023px) {
+  .detailing-main__dots-box {
+    left: -12px;
+  }
+
+  .detailing-main__title {
+  }
+}
+
+@media (min-width: 688px) and (max-width: 1023px) {
+  .detailing-main__subtitle {
+    max-width: 625px;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 687px) {
+  .detailing-main__title {
+    max-width: 508px;
+  }
+  .detailing-main__subtitle {
+    max-width: 508px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .detailing-main__title {
+    max-width: 508px;
+  }
+  .detailing-main__grid-item:first-child {
+    img {
+      max-width: 156px;
+    }
+
+    .detailing-main__crosses-box {
+      top: -36px;
+      left: -41px;
+    }
+  }
+
+  .detailing-main__grid-item:nth-child(2) {
+    img {
+      max-width: 185px;
+    }
+
+    .detailing-main__crosses-box {
+      top: -34px;
+      right: -41px;
+    }
+  }
+
+  .detailing-main__grid-item:last-child {
+    img {
+      max-width: 200px;
+    }
+
+    .detailing-main__crosses-box {
+      bottom: 21px;
+      left: -55px;
+    }
+  }
+
+  .detailing-main__images {
+    gap: 17px;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 767px) {
+  .detailing-main__grid-item:first-child {
+    img {
+      max-width: 156px;
+    }
+
+    .detailing-main__crosses-box {
+      top: -36px;
+      left: -41px;
+    }
+  }
+
+  .detailing-main__grid-item:nth-child(2) {
+    img {
+      max-width: 185px;
+    }
+
+    .detailing-main__crosses-box {
+      top: -34px;
+      right: -41px;
+    }
+  }
+
+  .detailing-main__grid-item:last-child {
+    img {
+      max-width: 200px;
+    }
+
+    .detailing-main__crosses-box {
+      bottom: 21px;
+      left: -55px;
+    }
+  }
+
+  .detailing-main__images {
+    gap: 17px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .detailing-main__flex-wrap {
+    flex-direction: column;
+    row-gap: 90px;
+  }
+}
+
+@media (max-width: 559px) {
+  .detailing-main__dots-box {
+    position: absolute;
+    top: -31px;
+    left: -9px;
+  }
+
+  .detailing-main__title {
+    font-size: 55px;
+    line-height: 0.90909;
+    margin-bottom: 14px;
+  }
+  .detailing-main__subtitle {
+    font-size: 25px;
+    line-height: 1.64295;
+    margin-bottom: 0;
+  }
+
+  .detailing-main__buttons-box {
+    margin-top: 35px;
+  }
+  .detailing-main__button-wrap:first-child {
+    margin-top: 35px;
+  }
+
+  .detailing-main__button-wrap:last-child {
+    display: none;
+  }
+
+  .detailing-main__grid-item:first-child {
+    img {
+      max-width: 138px;
+    }
+
+    .detailing-main__crosses-box {
+      top: -46px;
+      left: -11px;
+    }
+  }
+
+  .detailing-main__grid-item:nth-child(2) {
+    img {
+      max-width: 163px;
+    }
+
+    .detailing-main__crosses-box {
+      top: 21px;
+      right: -20px;
+    }
+  }
+
+  .detailing-main__grid-item:last-child {
+    img {
+      max-width: 181px;
+    }
+
+    .detailing-main__crosses-box {
+      bottom: 18px;
+      left: -112px;
+    }
+  }
+
+  .detailing-main__images {
+    gap: 17px;
+  }
+
+  .detailing-main__grid-image-box img {
+    z-index: 0;
+    position: static;
+  }
+}

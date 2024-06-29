@@ -1,91 +1,109 @@
 /* Контейнери */
 .container {
-	margin-left:  auto;
-	margin-right: auto;
-	padding-left: var(--container-padding);
-	padding-right: var(--container-padding);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
 
-	max-width: var(--container-width);
-	width: 100%;
+  max-width: var(--container-width);
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    max-width: 940px;
+  }
+}
+
+@media (max-width: 559px) {
+  .container {
+    max-width: 350px;
+  }
 }
 
 .container-full {
-	padding-left: var(--container-padding);
-	padding-right: var(--container-padding);
-	max-width: 100%;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  max-width: 100%;
 }
 
 .container-left-50 {
-	padding-left: var(--container-padding);
-	padding-right: var(--container-padding);
-	max-width: 50%;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  max-width: 50%;
 
-	@include mobile {
-		max-width: 100%;
-	}
+  @include mobile {
+    max-width: 100%;
+  }
 }
 
 .container-right-50 {
-	padding-left: var(--container-padding);
-	padding-right: var(--container-padding);
-	max-width: 50%;
-	margin-left: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  max-width: 50%;
+  margin-left: auto;
 
-	@include mobile {
-		max-width: 100%;
-	}
+  @include mobile {
+    max-width: 100%;
+  }
 }
 
 .container-right {
-	padding-left: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+  padding-left: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
 
-	@include tablet {
-		padding-left: var(--container-padding);
-	}
+  @include tablet {
+    padding-left: var(--container-padding);
+  }
 }
 
 .container-left {
-	padding-right: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+  padding-right: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
 
-	@include tablet {
-		padding-right: var(--container-padding);
-	}
+  @include tablet {
+    padding-right: var(--container-padding);
+  }
 }
 
 .container-half-left {
-	padding-right: calc(
-		(100% - var(--container-width)) / 2 + (var(--container-width) / 2)
-	);
-	padding-left: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+  padding-right: calc(
+    (100% - var(--container-width)) / 2 + (var(--container-width) / 2)
+  );
+  padding-left: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
 
-	@include tablet {
-		padding-left: var(--container-padding);
-	}
+  @include tablet {
+    padding-left: var(--container-padding);
+  }
 
-	@include mobile {
-		padding: 0 var(--container-padding);
-	}
+  @include mobile {
+    padding: 0 var(--container-padding);
+  }
 }
 
 .container-half-right {
-	padding-left: calc(
-		(100% - var(--container-width)) / 2 + (var(--container-width) / 2)
-	);
-	padding-right: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+  padding-left: calc(
+    (100% - var(--container-width)) / 2 + (var(--container-width) / 2)
+  );
+  padding-right: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
 
-	@include tablet {
-		padding-right: var(--container-padding);
-	}
+  @include tablet {
+    padding-right: var(--container-padding);
+  }
 
-	@include mobile {
-		padding: 0 var(--container-padding);
-	}
+  @include mobile {
+    padding: 0 var(--container-padding);
+  }
 }

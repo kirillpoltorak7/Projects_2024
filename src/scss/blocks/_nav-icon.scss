@@ -27,7 +27,7 @@
 .hamburger .line {
   width: 30px;
   height: 1px;
-  background-color: #ffd613;
+  background-color: var(--yellow);
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
@@ -41,7 +41,7 @@
 }
 
 .hamburger-9.is-active .line {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .hamburger-9.is-active .line:first-child {
@@ -60,7 +60,8 @@
 }
 
 .hamburger-9.is-active .line {
-  width: 17.5px;
+  width: 14.5px;
+  background-color: #fff;
 }
 
 .hamburger:hover {
@@ -92,8 +93,6 @@
   border: 5px solid transparent;
   top: calc(43% - 17.5px);
   right: calc(69% - 17.5px);
-  //   top: 11px;
-  //   right: 13px;
   border-radius: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -107,8 +106,6 @@
     height: 50px;
     top: calc(43% - 25px);
     right: calc(69% - 25px);
-    //   top: 11px;
-    //   right: 13px;
   }
   .hamburger-9.is-active .line {
     width: 25px;
@@ -116,7 +113,7 @@
 }
 
 .hamburger-9.is-active:before {
-  border: 2px solid #ffd613;
+  border: 2px solid #fff;
 }
 
 .hamburger-9.is-active .line:nth-child(2) {

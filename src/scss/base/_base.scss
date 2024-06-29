@@ -4,6 +4,7 @@ html {
 
 body {
   font-family: var(--font-main);
+  background-color: #131212;
   line-height: 1.625;
   font-size: 16px;
 }
@@ -21,7 +22,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 a {
@@ -43,4 +44,51 @@ a {
 button {
   cursor: pointer;
   border: 0;
+}
+
+.button {
+  border-radius: 50px;
+  color: #000;
+  line-height: 0;
+  letter-spacing: 0.15em;
+  font-size: 20px;
+  padding: 21.5px 32px;
+}
+
+.yellow-button {
+  background: linear-gradient(157deg, #ffd613 0%, #8e780d 100%);
+}
+
+.yellow-title {
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 1.45455;
+  color: var(--yellow);
+
+  @media (min-width: 560px) and (max-width: 1023px) {
+    margin-left: 15px;
+  }
+
+  @media (max-width: 559px) {
+    font-size: 35px;
+    line-height: 1.14286;
+  }
+}
+
+.dots-box {
+  position: absolute;
+  top: -19px;
+  left: -29px;
+
+  @media (min-width: 560px) and (max-width: 1023px) {
+    position: absolute;
+    top: -8px;
+    left: 3px;
+  }
+
+  @media (max-width: 559px) {
+    position: absolute;
+    top: -12px;
+    left: -9px;
+  }
 }
